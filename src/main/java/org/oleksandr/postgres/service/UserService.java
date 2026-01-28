@@ -14,9 +14,12 @@ public class UserService {
 
     private final UserRepository userRepository;
 
+
     public List<Users> findAll() {
         return userRepository.findAll();
+        // JPA сам реалізує цю фічу //
     }
+
 
     public Users create(CreateUser createUser) {
 
@@ -26,8 +29,6 @@ public class UserService {
         user.setAge(createUser.getAge());
 
 
-        userRepository.save(user);
-        return user;
+        return userRepository.save(user);
     }
-
 }

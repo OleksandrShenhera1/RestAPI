@@ -18,6 +18,17 @@ import java.util.List;
 @RequestMapping("/postgres")
 @RequiredArgsConstructor
 public class PostgresController {
+    // http запиту:
+    // http://localhost:9090/postgres/OLEKSANDR/Postgres
+
+    // Приклад запиту Post:
+    //{
+    //  "username": "oleksandr",
+    //  "password": "4325354",
+    //  "age": 18
+    //}
+
+    // Запит Get не потребує параметрів, одразу вертає якщо щось є в ДБ
 
     private final UserService userService;
 
